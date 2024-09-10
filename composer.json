@@ -1,0 +1,38 @@
+{
+  "name": "dub/laravel-dub",
+  "description": "The official Dub.co Laravel integration.",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Dub\\Laravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Dub\\Laravel\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "dub/dub-php": "^0.5.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.17",
+    "phpstan/phpstan": "^1.12",
+    "rector/rector": "^1.2",
+    "phpunit/phpunit": "^11.3",
+    "orchestra/testbench": "^9.4"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Dub\\Laravel\\PackageServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": [
+      "./vendor/bin/phpunit --testdox"
+    ]
+  }
+}
